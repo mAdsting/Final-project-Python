@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Global Data Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">COVID-19 Global Data Tracker</h1>
+       
+        </div>
+    </header>
+
+    <div class="container global-stats-container">
+        <div class="global-stats">
+            <h2>Global Statistics</h2>
+            <p>Total Confirmed: <span id="global-cases">-</span></p>
+            <p>Total Deaths: <span id="global-deaths">-</span></p>
+            <p>Total Recovered: <span id="global-recovered">-</span></p>
+            <p>New Confirmed Today: <span id="global-new-cases">-</span></p>
+        </div>
+        <div class="global-chart">
+            <canvas id="globalChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Country Statistics and Trends</h2>
+        <label for="country-input">Enter Country Name:</label>
+        <input type="text" id="country-input" placeholder="e.g., United States, India">
+        <button id="search-button">Show Data</button>
+
+        <div id="country-stats">
+            <h3><span id="country-name">Select a Country</span></h3>
+            <p>Total Confirmed: <span id="country-cases">-</span></p>
+            <p>Total Deaths: <span id="country-deaths">-</span></p>
+            <p>Total Recovered: <span id="country-recovered">-</span></p>
+            <p>New Confirmed Today: <span id="country-new-cases">-</span></p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <div id="loading" style="display: none; text-align: center;">
+        <p>Loading data...</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 COVID-19 Tracker. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

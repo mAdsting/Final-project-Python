@@ -1,0 +1,152 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #343a40;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input and Button Styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #138496;
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+/* Global Statistics Container */
+.global-stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.global-stats {
+    flex: 1;
+    min-width: 300px;
+}
+
+.global-chart {
+    flex: 1;
+    max-width: 400px;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.global-chart canvas {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+}
+
+/* Data Display Styling */
+#global-cases, #global-deaths, #global-recovered, #global-new-cases,
+#country-cases, #country-deaths, #country-recovered, #country-new-cases {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#global-deaths, #country-deaths { color: #dc3545; }
+#global-recovered, #country-recovered { color: #28a745; }
+#global-new-cases, #country-new-cases { color: #ffc107; }
+
+/* Header and Footer */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .chart-container {
+        height: 300px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
